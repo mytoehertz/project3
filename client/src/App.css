@@ -5,10 +5,10 @@
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
-  --mainGreen: #0b8542;
-  --lightGreen: #93f08a;
+  --mainGreen: #054e26;
+  --lightGreen: #5aa054;
   --mainWhite: #f3f3f3;
-  --mainDark: #12221b;
+  --mainDark: #343a40;
   --mainYellow: #d6a03c;
 }
 
@@ -22,7 +22,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background: var(--mainWhite) !important;
   color: #333;
 }
 

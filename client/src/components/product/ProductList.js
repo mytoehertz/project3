@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Product from "./Product";
 import Title from "./Title";
-import { ProductConsumer } from "../../context";
+import { ProductConsumer } from "../../utils/context";
 
 export default class ProductList extends Component {
     // state={
@@ -12,7 +12,7 @@ export default class ProductList extends Component {
         return (
             <React.Fragment>
                 <div className="py-5">
-                    <div className="container">
+                    <div className="container-fluid">
                         <Title name="our" title="products" />
                         <div className="row">
                             <ProductConsumer>

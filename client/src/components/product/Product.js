@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { ProductConsumer } from "../../context";
+import { ProductConsumer } from "../../utils/context";
 import PropTypes from "prop-types";
 
 export default class Product extends Component {
@@ -40,10 +40,10 @@ export default class Product extends Component {
 
                     {/* card footer */}
                     <div className="card-footer d-flex justify-content-between">
-                        <p className="align-self-center mb-0">
+                        <p className="text-center mb-0">
                            {name} 
                         </p>
-                        <h5 className="text-green font-italic mb-0">
+                        <h5 className="text-center text-green font-italic mb-0">
                         <span className="mr-1">$</span>
                         {price}
                         </h5>
@@ -68,6 +68,7 @@ const ProductWrapper = styled.div`
     .card {
         border-color: transparent;
         transition: all 1s linear;
+        width: 30%
     }
     .card-footer {
         background: transparent;
@@ -77,7 +78,7 @@ const ProductWrapper = styled.div`
     &:hover {
         .card{
             border: 0.04rem solid rgba(0,0,0,0.2);
-            box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+            box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.2);
         }
         .card-footer{
             background: rgba(247,247,247);
@@ -86,7 +87,7 @@ const ProductWrapper = styled.div`
     .img-container{
         position: relative !important;
         overflow: hidden !important;
-        width: 33.3% !important
+        width: 100% !important
     }
     .card-img-top {
         transition: all 1s linear;
@@ -98,7 +99,7 @@ const ProductWrapper = styled.div`
         position: absolute;
         bottom: 0;
         right: 0;
-        padding: 0.2rem 0.4rem;
+        padding: 0.6rem 0.8rem;
         background: var(--lightGreen);
         border: none;
         color: var(--mainWhite);
