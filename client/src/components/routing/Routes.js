@@ -14,6 +14,10 @@ import Posts from '../posts/Posts';
 import Post from '../post/Post';
 import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
+import About from "../about/About";
+import ProductList from "../product/ProductList";
+import Details from "../product/Details";
+import Cart from "../cart/Cart";
 
 const Routes = () => {
   return (
@@ -31,6 +35,10 @@ const Routes = () => {
         <PrivateRoute exact path='/add-education' component={AddEducation} />
         <PrivateRoute exact path='/posts' component={Posts} />
         <PrivateRoute exact path='/posts/:id' component={Post} />
+        <Route exact path="/about" component={About}></Route>
+        <Route exact path="/products" component={ProductList}></Route>
+        <Route exact path="/details" component={Details}></Route>
+        <Route exact path="/cart" component={Cart}></Route>
         <Route component={NotFound} />
       </Switch>
     </section>
