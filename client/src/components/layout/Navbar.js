@@ -8,6 +8,9 @@ import { ButtonContainer } from "../product/Button";
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
+      <li>
+        <Link to="/contact">Contact Us</Link>
+      </li>
     <li>
         <Link to="/about">About Us</Link>
       </li>

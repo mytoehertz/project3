@@ -18,6 +18,7 @@ import About from "../about/About";
 import ProductList from "../product/ProductList";
 import Details from "../product/Details";
 import Cart from "../cart/Cart";
+import Contact from "../contact/Contact";
 
 const Routes = () => {
   return (
@@ -39,6 +40,7 @@ const Routes = () => {
         <Route exact path="/products" component={ProductList}></Route>
         <Route exact path="/details" component={Details}></Route>
         <Route exact path="/cart" component={Cart}></Route>
+        <Route exact path="/contact" component={Contact}></Route>
         <Route component={NotFound} />
       </Switch>
     </section>
