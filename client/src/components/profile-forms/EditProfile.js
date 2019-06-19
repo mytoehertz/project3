@@ -12,11 +12,11 @@ const EditProfile = ({
 }) => {
   const [formData, setFormData] = useState({
     company: '',
-    website: '',
+    address: '',
     location: '',
+    zip: '',
     status: '',
     skills: '',
-    githubusername: '',
     bio: '',
     twitter: '',
     facebook: '',
@@ -32,8 +32,10 @@ const EditProfile = ({
 
     setFormData({
       company: loading || !profile.company ? '' : profile.company,
-      website: loading || !profile.website ? '' : profile.website,
+      address: loading || !profile.address ? '' : profile.address,
       location: loading || !profile.location ? '' : profile.location,
+      zip: loading || !profile.zip ? '' : profile.zip,
+
       status: loading || !profile.status ? '' : profile.status,
       skills: loading || !profile.skills ? '' : profile.skills.join(','),
       githubusername:
@@ -49,11 +51,11 @@ const EditProfile = ({
 
   const {
     company,
-    website,
+    address,
     location,
+    zip,
     status,
     skills,
-    githubusername,
     bio,
     twitter,
     facebook,
@@ -81,18 +83,14 @@ const EditProfile = ({
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
           <select name='status' value={status} onChange={e => onChange(e)}>
-            <option value='0'>* Select Professional Status</option>
-            <option value='Developer'>Developer</option>
-            <option value='Junior Developer'>Junior Developer</option>
-            <option value='Senior Developer'>Senior Developer</option>
-            <option value='Manager'>Manager</option>
-            <option value='Student or Learning'>Student or Learning</option>
-            <option value='Instructor'>Instructor or Teacher</option>
-            <option value='Intern'>Intern</option>
-            <option value='Other'>Other</option>
+            <option value='0'>* Select your level of green thumb</option>
+            <option value='Pro!'>Pro! I'm an expert on things green</option>
+            <option value='Intermediate'>Intermediate! I can keep a plant or two alive</option>
+            <option value='Beginner'>Beginner! I'm pretty sure my cacti look great</option>
+            <option value='Noob'>None! I wish I had a green thumb</option>
           </select>
           <small className='form-text'>
-            Give us an idea of where you are at in your career
+            Give us your personal info!
           </small>
         </div>
         <div className='form-group'>
@@ -110,13 +108,13 @@ const EditProfile = ({
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Website'
-            name='website'
-            value={website}
+            placeholder='Address'
+            name='address'
+            value={address}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own or a company website
+            Mailing Address
           </small>
         </div>
         <div className='form-group'>
@@ -134,28 +132,28 @@ const EditProfile = ({
         <div className='form-group'>
           <input
             type='text'
+            placeholder='Zip'
+            name='zip'
+            value={zip}
+            onChange={e => onChange(e)}
+          />
+          <small className='form-text'>
+            ZIP Code
+          </small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
             placeholder='* Skills'
             name='skills'
             value={skills}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values (eg. Gardner, Plant Lover, etc)
           </small>
         </div>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Github Username'
-            name='githubusername'
-            value={githubusername}
-            onChange={e => onChange(e)}
-          />
-          <small className='form-text'>
-            If you want your latest repos and a Github link, include your
-            username
-          </small>
-        </div>
+   
         <div className='form-group'>
           <textarea
             placeholder='A short bio of yourself'
@@ -242,6 +240,7 @@ const EditProfile = ({
         </Link>
       </form>
     </Fragment>
+       
   );
 };
 

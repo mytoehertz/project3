@@ -7,11 +7,11 @@ import { createProfile } from '../../actions/profile';
 const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
     company: '',
-    website: '',
+    address: '',
     location: '',
+    zip: '',
     status: '',
     skills: '',
-    githubusername: '',
     bio: '',
     twitter: '',
     facebook: '',
@@ -24,11 +24,11 @@ const CreateProfile = ({ createProfile, history }) => {
 
   const {
     company,
-    website,
+    address,
     location,
+    zip,
     status,
     skills,
-    githubusername,
     bio,
     twitter,
     facebook,
@@ -63,7 +63,7 @@ const CreateProfile = ({ createProfile, history }) => {
             <option value='Noob'>None! I wish I had a green thumb</option>
           </select>
           <small className='form-text'>
-            Give us an idea of where you are at in your career
+            Give us your personal info!
           </small>
         </div>
         <div className='form-group'>
@@ -81,13 +81,13 @@ const CreateProfile = ({ createProfile, history }) => {
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Website'
-            name='website'
-            value={website}
+            placeholder='Address'
+            name='address'
+            value={address}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own or a company website
+            Mailing Address
           </small>
         </div>
         <div className='form-group'>
@@ -105,28 +105,28 @@ const CreateProfile = ({ createProfile, history }) => {
         <div className='form-group'>
           <input
             type='text'
+            placeholder='Zip'
+            name='zip'
+            value={zip}
+            onChange={e => onChange(e)}
+          />
+          <small className='form-text'>
+            ZIP Code
+          </small>
+        </div>
+        <div className='form-group'>
+          <input
+            type='text'
             placeholder='* Skills'
             name='skills'
             value={skills}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values (eg. Gardner, Plant Lover, etc)
           </small>
         </div>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Github Username'
-            name='githubusername'
-            value={githubusername}
-            onChange={e => onChange(e)}
-          />
-          <small className='form-text'>
-            If you want your latest repos and a Github link, include your
-            username
-          </small>
-        </div>
+   
         <div className='form-group'>
           <textarea
             placeholder='A short bio of yourself'
