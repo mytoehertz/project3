@@ -8,20 +8,15 @@ import { ButtonContainer } from "../product/Button";
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
-      <li>
-        <Link to="/contact">Contact Us</Link>
-      </li>
-      <li>
-        <Link to="/about">About Us</Link>
-      </li>
-      <li>
-        <Link to="/posts">Posts</Link>
-      </li>
+
       <li>
         <Link to="/dashboard">
           <i className="fas fa-user" />{" "}
           <span className="hide-sm">Dashboard</span>
         </Link>
+        <li>
+        <Link to='/posts'>Posts</Link>
+      </li>
       </li>
       <li className="nav-item ml-5">
         <Link to="/products" className="nav-link">
@@ -29,9 +24,17 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li>
       <li>
-        <a onClick={logout} href="#!">
-          <i className="fas fa-sign-out-alt" />{" "}
-          <span className="hide-sm">Logout</span>
+
+        <Link to="/about">About Us</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact Us</Link>
+      </li>
+      <li>
+        <a onClick={logout} href='#!'>
+          <i className='fas fa-sign-out-alt' />{' '}
+          <span className='hide-sm'>Logout</span>
+
         </a>
       </li>
       <Link to="/cart" className="ml-auto">
@@ -47,9 +50,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
-      <li>
-        <Link to="/about">About Us</Link>
+
+      <li className="nav-item ml-5">
+          <Link to="/products" className="nav-link">Shop</Link>
+
       </li>
+    
       <li>
         <Link to="/register">Register</Link>
       </li>
@@ -57,6 +63,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Link to="/login">
           <i className="fas fa-sign-in-alt" /> Login
         </Link>
+      </li>
+      <li>
+        <Link to="/about">About Us</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact Us</Link>
       </li>
     </ul>
   );

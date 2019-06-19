@@ -8,11 +8,14 @@ const ProfileSchema = new mongoose.Schema({
   company: {
     type: String
   },
-  website: {
+  address: {
     type: String
   },
   location: {
     type: String
+  },
+  zip: {
+    type: Number
   },
   status: {
     type: String,
