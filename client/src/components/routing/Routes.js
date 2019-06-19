@@ -17,6 +17,7 @@ import PrivateRoute from "../routing/PrivateRoute";
 import About from "../about/About";
 import ProductList from "../product/ProductList";
 import Details from "../product/Details";
+import Modal from "./product/Modal";
 import Cart from "../cart/Cart";
 import Contact from "../contact/Contact";
 
@@ -43,6 +44,7 @@ const Routes = () => {
         <Route exact path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
+      <Modal />
     </section>
   );
 };
