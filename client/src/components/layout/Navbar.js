@@ -1,41 +1,47 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { logout } from '../../actions/auth';
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { logout } from "../../actions/auth";
 import { ButtonContainer } from "../product/Button";
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to="/contact">Contact Us</Link>
+        <Link to="/dashboard">
+          <i className="fas fa-user" />{" "}
+          <span className="hide-sm">Dashboard</span>
+        </Link>
+        <li>
+        <Link to='/posts'>Posts</Link>
       </li>
-    <li>
+      </li>
+      <li className="nav-item ml-5">
+        <Link to="/products" className="nav-link">
+          Shop
+        </Link>
+      </li>
+      <li>
+
         <Link to="/about">About Us</Link>
       </li>
       <li>
-        <Link to='/posts'>Posts</Link>
-      </li>
-      <li>
-        <Link to='/dashboard'>
-          <i className='fas fa-user' />{' '}
-          <span className='hide-sm'>Dashboard</span>
-        </Link>
-      </li>
-      <li className="nav-item ml-5">
-          <Link to="/products" className="nav-link">Shop</Link>
+        <Link to="/contact">Contact Us</Link>
       </li>
       <li>
         <a onClick={logout} href='#!'>
           <i className='fas fa-sign-out-alt' />{' '}
           <span className='hide-sm'>Logout</span>
+
         </a>
       </li>
       <Link to="/cart" className="ml-auto">
         <ButtonContainer>
-          <span><i className="fa fa-cart-arrow-down"/> </span>
-            Cart
+          <span>
+            <i className="fa fa-cart-arrow-down" />{" "}
+          </span>
+          Cart
         </ButtonContainer>
       </Link>
     </ul>
@@ -43,23 +49,34 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
-    <li>
+
+      <li className="nav-item ml-5">
+          <Link to="/products" className="nav-link">Shop</Link>
+
+      </li>
+    
+      <li>
+        <Link to="/register">Register</Link>
+      </li>
+      <li>
+        <Link to="/login">
+          <i className="fas fa-sign-in-alt" /> Login
+        </Link>
+      </li>
+      <li>
         <Link to="/about">About Us</Link>
       </li>
       <li>
-        <Link to='/register'>Register</Link>
-      </li>
-      <li>
-        <Link to='/login'><i className='fas fa-sign-in-alt' />{' '}Login</Link>
+        <Link to="/contact">Contact Us</Link>
       </li>
     </ul>
   );
 
   return (
-    <nav className='navbar bg-dark'>
+    <nav className="navbar bg-dark">
       <h1>
-        <Link to='/'>
-          <i className='fas fa-leaf' /> Little Shop of Soil
+        <Link to="/">
+          <i className="fas fa-leaf" /> Little Shop of Soil
         </Link>
       </h1>
       {!loading && (

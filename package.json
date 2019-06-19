@@ -18,10 +18,13 @@
     "config": "^3.1.0",
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
+    "google-map-react": "^1.1.4",
+    "google-maps-react": "^2.0.2",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.1",
     "react": "^16.8.6",
+    "react-google-maps-loader": "^4.2.5",
     "request": "^2.88.0",
     "styled-components": "^4.3.1"
   },
