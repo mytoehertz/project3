@@ -38,11 +38,15 @@ class Contact extends Component {
     const message = document.getElementById("message").value;
     axios({
       method: "POST",
-      url: "http://localhost:5000/send",
+      url: "http://localhost:5000/api/email",
       data: {
         name: name,
         email: email,
-        messsage: message
+        message: message
+      },
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+        //Access-Control-Allow-Methods: 'GET, PUT, POST, DELETE, OPTIONS'
       }
     }).then(response => {
       if (response.data.msg === "success") {
