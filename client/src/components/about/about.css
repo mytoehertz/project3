@@ -1,0 +1,20 @@
+.maiDiv{
+    background-color: rgb(29,69,78);  
+}
+
+.left {
+    background-color: rgb(29,69,78);
+    color: white;
+    height: 500px;
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large
+}
+
+.right {
+    background-image: url(./plantbackground.jpg);
+    background-size: cover
+}
+
+.title {
+    font-size: 150px
+}
