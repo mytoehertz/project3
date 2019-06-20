@@ -8,15 +8,18 @@ import { ButtonContainer } from "../product/Button";
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
-      <li>
+      <li className="fas fa-user">{" "}
         <Link to="/dashboard">
-          <i className="fas fa-user" />{" "}
+          
+          
+      
           <span className="hide-sm">Dashboard</span>
         </Link>
+        </li>
         <li>
         <Link to='/posts'>Posts</Link>
       </li>
-      </li>
+      
       <li className="nav-item ml-5">
         <Link to="/products" className="nav-link">
           Shop
