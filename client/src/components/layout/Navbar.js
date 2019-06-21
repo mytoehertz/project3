@@ -4,11 +4,14 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
 import { ButtonContainer } from "../product/Button";
+import logo from './stickerdesign.png';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul>
-      <li className="fas fa-user">
+    <nav className="navbar navbar-expand-lg navbar">
+    <div className="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+        <ul className="navbar-nav ml-auto text-center">
+        <li>
         {" "}
         <Link to="/dashboard">
           <span className="hide-sm">Dashboard</span>
@@ -17,22 +20,31 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to="/posts">Posts</Link>
       </li>
-
-      <li className="nav-item ml-5">
-        <Link to="/products" className="nav-link">
+        </ul>
+    </div>
+    <div className="mx-auto my-2 order-0 order-md-1 position-relative">
+        <a className="mx-auto" href="#"> </a>
+        <Link to="/home" className="nav-link">
+        <img src={logo} alt="logo" style={{width: 150}} />
+        </Link>
+       
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span className="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div className="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+        <ul className="navbar-nav mr-auto text-center">
+        <li>
+        <Link to="/products">
           Shop
         </Link>
       </li>
       <li>
-        <Link to="/about">About Us</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact Us</Link>
-      </li>
-      <li>
         <a onClick={logout} href="#!">
-          <i className="fas fa-sign-out-alt" />{" "}
-          <span className="hide-sm">Logout</span>
+       
+          <i className="fas fa-sign-in-alt" /> Logout
+      
+          
         </a>
       </li>
       <Link to="/cart" className="ml-auto">
@@ -43,18 +55,41 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           Cart
         </ButtonContainer>
       </Link>
-    </ul>
+        </ul>
+    </div>
+</nav>
+
   );
 
   const guestLinks = (
-    <ul>
-      <li className="nav-item ml-5">
-        <Link to="/products" className="nav-link">
+    <nav className="navbar navbar-expand-lg navbar">
+    <div className="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+        <ul className="navbar-nav ml-auto text-center">
+        <li className="nav-item">
+        <Link to="/about">
+          About Us
+        </Link>
+      </li>
+        <li className="nav-item">
+        <Link to="/products">
           Shop
         </Link>
       </li>
-
-      <li>
+        </ul>
+    </div>
+    <div className="mx-auto my-2 order-0 order-md-1 position-relative">
+        <a className="mx-auto" href="#"></a>
+        <Link to="/home" className="nav-link">
+        <img src={logo} alt="logo" style={{width: 150}} />
+        </Link>
+        
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span className="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div className="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+        <ul className="navbar-nav mr-auto text-center">
+        <li>
         <Link to="/register">Register</Link>
       </li>
       <li>
@@ -62,26 +97,43 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <i className="fas fa-sign-in-alt" /> Login
         </Link>
       </li>
-      <li>
-        <Link to="/about">About Us</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact Us</Link>
-      </li>
-    </ul>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+    
+    
   );
 
   return (
-    <nav className="navbar bg-dark">
-      <h1>
-        <Link to="/">
-          <i className="fas fa-leaf" /> Little Shop of Soil
+<div>
+
+
+
+    
+{/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+
+    <a className="navbar-brand" href="#">
+    <Link to="/" className="nav-link">
+       <img src={logo} alt="logo" style={{width: 150}} />   
         </Link>
-      </h1>
-      {!loading && (
+    
+        </a>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+    <div className="collapse navbar-collapse" id="navbarResponsive"> */}
+    {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-      )}
-    </nav>
+      )} 
+</div>
+
+
+
   );
 };
 
