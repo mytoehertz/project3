@@ -8,35 +8,31 @@ import { ButtonContainer } from "../product/Button";
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
-      <li className="fas fa-user">{" "}
+      <li className="fas fa-user">
+        {" "}
         <Link to="/dashboard">
-          
-          
-      
           <span className="hide-sm">Dashboard</span>
         </Link>
-        </li>
-        <li>
-        <Link to='/posts'>Posts</Link>
       </li>
-      
+      <li>
+        <Link to="/posts">Posts</Link>
+      </li>
+
       <li className="nav-item ml-5">
         <Link to="/products" className="nav-link">
           Shop
         </Link>
       </li>
       <li>
-
         <Link to="/about">About Us</Link>
       </li>
       <li>
         <Link to="/contact">Contact Us</Link>
       </li>
       <li>
-        <a onClick={logout} href='#!'>
-          <i className='fas fa-sign-out-alt' />{' '}
-          <span className='hide-sm'>Logout</span>
-
+        <a onClick={logout} href="#!">
+          <i className="fas fa-sign-out-alt" />{" "}
+          <span className="hide-sm">Logout</span>
         </a>
       </li>
       <Link to="/cart" className="ml-auto">
@@ -52,12 +48,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
-
       <li className="nav-item ml-5">
-          <Link to="/products" className="nav-link">Shop</Link>
-
+        <Link to="/products" className="nav-link">
+          Shop
+        </Link>
       </li>
-    
+
       <li>
         <Link to="/register">Register</Link>
       </li>
