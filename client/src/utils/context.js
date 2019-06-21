@@ -13,6 +13,7 @@ class ProductProvider extends Component {
         cartSubTotal: 0,
         cartTax: 0,
         cartTotal: 0,
+        cartItemCount: 0
     };
     componentDidMount() {
         this.setProducts();
@@ -40,6 +41,8 @@ getItem = (id) => {
         })
     }
     addToCart = (id) => {
+        let cartItemCount = this.state.cart.length;
+        cartItemCount = cartItemCount + 1;
         let tempProducts = [...this.state.products];
         const index = tempProducts.indexOf(this.getItem(id));
         const product = tempProducts[index];
@@ -48,7 +51,11 @@ getItem = (id) => {
         const price = product.price;
         product.total = price;
         this.setState(() => {
-            return { products: tempProducts , cart:[...this.state.cart, product] };
+            return { 
+                products: tempProducts , 
+                cart:[...this.state.cart, product],
+                cartItemCount: cartItemCount 
+            };
         }, 
         () => {
             this.addTotals();
@@ -121,11 +128,13 @@ getItem = (id) => {
        removedProduct.inCart = false;
        removedProduct.count = 0;
        removedProduct.total = 0;
+       let cartItemCount = tempCart.length;
 
        this.setState(() => {
            return{
                cart: [...tempCart],
-               products: [...tempProducts]
+               products: [...tempProducts],
+               cartItemCount: cartItemCount
            }
        }, () => {
            this.addTotals();
@@ -134,7 +143,10 @@ getItem = (id) => {
 
     clearCart = () => {
         this.setState(() => {
-            return { cart: [] }
+            return { 
+                cart: [],
+                cartItemCount: 0 
+            }
             }, () => {
                 this.setProducts();
                 this.addTotals();
