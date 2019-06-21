@@ -4,7 +4,11 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
 import { ButtonContainer } from "../product/Button";
+
 import logo from './stickerdesign.png';
+
+import CartButton from "./CartButton";
+
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
@@ -47,6 +51,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           
         </a>
       </li>
+
       <Link to="/cart" className="ml-auto">
         <ButtonContainer>
           <span>
@@ -58,6 +63,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </ul>
     </div>
 </nav>
+
+
+      <CartButton />
+    </ul>
 
   );
 
