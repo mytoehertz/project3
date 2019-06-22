@@ -1,20 +1,19 @@
-.maiDiv{
-    background-color: rgb(29,69,78);  
+.maiDiv {
+  background-color: rgb(29, 69, 78);
 }
 
-.left {
-    background-color: rgb(29,69,78);
-    color: white;
-    height: 500px;
-    font-family: 'Amatic SC', cursive;
-    font-size: x-large
+.firstDiv {
+  background-image: url(./back.JPG);
+  background-size: cover;
+  color: white;
+  font-family: "Amatic SC", cursive;
+  font-size: 150px;
+  width: 100%;
+  height: 4em;
+  background-position-y: -30px;
+  margin-right: 0;
 }
 
-.right {
-    background-image: url(./plantbackground.jpg);
-    background-size: cover
-}
-
-.title {
-    font-size: 150px
+.section {
+  margin-bottom: 20px;
 }
