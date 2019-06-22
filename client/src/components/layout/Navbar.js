@@ -52,14 +52,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </a>
       </li>
 
-      <Link to="/cart" className="ml-auto">
-        <ButtonContainer>
-          <span>
-            <i className="fa fa-cart-arrow-down" />{" "}
-          </span>
-          Cart
-        </ButtonContainer>
-      </Link>
+      <CartButton />
         </ul>
     </div>
 </nav>
