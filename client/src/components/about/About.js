@@ -62,6 +62,9 @@ export default class About extends Component {
             </div>
           </div>
         </div>
+        <div className="container">
+          <h3>The Founders</h3>
+        </div>
 
         <div className="thirdDiv row section">
           <div className="col-lg-8 textDiv">
@@ -75,6 +78,7 @@ export default class About extends Component {
           </div>
           <div className="col-md-4 alissaphotoDiv" />
         </div>
+
         <div className="fourthDiv row section">
           <div className="col-md-4 adamphotoDiv" />
           <div className="col-lg-8 textDiv">
