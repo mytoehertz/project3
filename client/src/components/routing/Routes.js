@@ -20,6 +20,7 @@ import Details from "../product/Details";
 import Modal from "../product/Modal";
 import Cart from "../cart";
 import Contact from "../contact/Contact";
+import Landing from "../layout/Landing";
 
 const Routes = () => {
   return (
@@ -42,6 +43,7 @@ const Routes = () => {
         <Route exact path="/details" component={Details} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/home" component={Landing} />
         <Route component={NotFound} />
       </Switch>
       <Modal />
