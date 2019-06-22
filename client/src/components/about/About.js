@@ -12,6 +12,10 @@ import img7 from "./img7.JPG";
 import img8 from "./img8.JPG";
 
 export default class About extends Component {
+  componentDidMount() {
+    console.log("[DEBUG] mounting about component");
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="mainDiv">
