@@ -28,6 +28,10 @@ body {
   color: #333;
 }
 
+#root {
+  overflow: hidden;
+}
+
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -314,20 +318,18 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 2px rgb(29,69,78);
+  border-bottom: solid 2px rgb(29, 69, 78);
   opacity: 0.9;
   margin-left: auto !important;
   height: 140px;
-  font-family: 'Mali', cursive;
+  font-family: "Mali", cursive;
   font-size: x-large;
-  background-color: rgb(50, 109, 122)
+  background-color: rgb(50, 109, 122);
 }
 
 .navbar ul {
   display: flex;
 }
-
-
 
 .navbar a {
   color: #fff;
@@ -342,8 +344,6 @@ button {
 .navbar .welcome span {
   margin-right: 0.6rem;
 }
-
-
 
 /* Landing Page */
 .landing {
@@ -633,7 +633,6 @@ button {
 }
 
 .footer {
-
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 2rem;
@@ -643,12 +642,12 @@ button {
   border-top: solid 1px var(--primary-color);
   opacity: 0.9;
   margin-left: auto !important;
-  font-family: 'Mali', cursive;
+  font-family: "Mali", cursive;
   font-size: large;
   background-color: rgb(39, 84, 94);
-  color: white
+  color: white;
 }
 
 .footcont {
-  margin: 40px
+  margin: 40px;
 }
