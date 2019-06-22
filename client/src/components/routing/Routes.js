@@ -24,7 +24,7 @@ import Landing from "../layout/Landing";
 
 const Routes = () => {
   return (
-    <section className="container">
+    <section>
       <Alert />
       <Switch>
         <Route exact path="/register" component={Register} />

@@ -52,15 +52,16 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
               <i className="fas fa-sign-in-alt" /> Logout
             </a>
           </li>
-
-          <Link to="/cart" className="ml-auto">
-            <ButtonContainer>
-              <span>
-                <i className="fa fa-cart-arrow-down" />{" "}
-              </span>
-              Cart
-            </ButtonContainer>
-          </Link>
+          <li>
+            <Link to="/cart" className="ml-auto">
+              <ButtonContainer>
+                <span>
+                  <i className="fa fa-cart-arrow-down" />{" "}
+                </span>
+                Cart
+              </ButtonContainer>
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
