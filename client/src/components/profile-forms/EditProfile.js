@@ -71,8 +71,11 @@ const EditProfile = ({
   };
 
   return (
+
+    <div className="container">
     <Fragment>
-      <h1 className='large text-primary'>Create Your Profile</h1>
+      
+      <h1 className='large text-primary'>Edit Your Profile</h1>
       <p className='lead'>
         <i className='fas fa-user' /> Let's get some information to make your
         profile stand out
@@ -172,7 +175,7 @@ const EditProfile = ({
           </button>
           <span>Optional</span>
         </div>
-
+        
         {displaySocialInputs && (
           <Fragment>
             <div className='form-group social-input'>
@@ -229,6 +232,7 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
+            
           </Fragment>
         )}
 
@@ -238,7 +242,7 @@ const EditProfile = ({
         </Link>
       </form>
     </Fragment>
-       
+    </div>
   );
 };
 

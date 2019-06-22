@@ -4,10 +4,11 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import DashboardActions from "./DashboardActions";
-import Profile from "./../profile/ProfileTop";
+import ProfileTop from "./../profile/ProfileTop";
+import ProfileAbout from "./../profile/ProfileAbout";
 
 import { getCurrentProfile, deleteAccount } from "../../actions/profile";
-import ProfileTop from "./../profile/ProfileTop";
+
 
 const Dashboard = ({
   getCurrentProfile,
@@ -30,7 +31,12 @@ const Dashboard = ({
         </p>
         {profile !== null ? (
           <Fragment>
+            <div className="container">
             <DashboardActions />
+            <div className="profile-grid my-1">
+              <ProfileTop profile={profile} />
+              <ProfileAbout profile={profile} />
+            </div>
 
             <div className="my-2">
               <button
@@ -39,6 +45,7 @@ const Dashboard = ({
               >
                 <i className="fas fa-user-minus" /> Delete My Account
               </button>
+            </div>
             </div>
           </Fragment>
         ) : (
