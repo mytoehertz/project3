@@ -29,10 +29,15 @@ p {
   margin-bottom: 20px;
 }
 
+.secDiv {
+  font-family: "Raleway", sans-serif;
+}
+
 .thirdDiv {
   background-color: rgb(93, 157, 172);
   height: 25em;
   color: white;
+  font-family: "Raleway", sans-serif;
 }
 
 .text {

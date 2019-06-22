@@ -4,6 +4,8 @@ class Contact extends Component {
   render() {
     return (
       <div className="container">
+        <h1>Get in touch!</h1>
+        <br />
         <form
           id="contact-form"
           onSubmit={this.handleSubmit.bind(this)}
