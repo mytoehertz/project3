@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
-import { ButtonContainer } from "../product/Button";
 
 import logo from "./stickerdesign.png";
 
@@ -44,7 +43,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </div>
       <div className="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
         <ul className="navbar-nav mr-auto text-center">
-
           <li>
             <Link to="/products">Shop</Link>
           </li>
@@ -54,19 +52,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             </a>
           </li>
           <li>
-            <Link to="/cart" className="ml-auto">
-              <ButtonContainer>
-                <span>
-                  <i className="fa fa-cart-arrow-down" />{" "}
-                </span>
-                Cart
-              </ButtonContainer>
-            </Link>
+            <CartButton />
           </li>
         </ul>
       </div>
     </nav>
-
   );
 
   const guestLinks = (
