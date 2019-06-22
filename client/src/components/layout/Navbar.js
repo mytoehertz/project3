@@ -44,6 +44,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </div>
       <div className="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
         <ul className="navbar-nav mr-auto text-center">
+
           <li>
             <Link to="/products">Shop</Link>
           </li>
@@ -65,6 +66,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </ul>
       </div>
     </nav>
+
   );
 
   const guestLinks = (

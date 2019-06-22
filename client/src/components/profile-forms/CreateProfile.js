@@ -69,13 +69,13 @@ const CreateProfile = ({ createProfile, history }) => {
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Company'
+            placeholder='Title'
             name='company'
             value={company}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own company or one you work for
+            Title: Mr, Mrs, Ms, etc
           </small>
         </div>
         <div className='form-group'>
