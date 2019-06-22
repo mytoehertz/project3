@@ -65,9 +65,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 </nav>
 
 
-      <CartButton />
-    </ul>
-
+ 
   );
 
   const guestLinks = (
