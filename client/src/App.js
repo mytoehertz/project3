@@ -4,6 +4,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Landing from "./components/layout/Landing";
 import Routes from "./components/routing/Routes";
+import Scroller from "./components/routing/Scroller";
 import { ProductProvider } from "../src/utils/context";
 
 // Redux
@@ -29,10 +30,12 @@ const App = () => {
         <Router>
           <Fragment>
             <Navbar />
-            <Switch>
-              <Route exact path="/" component={Landing} />
-              <Route component={Routes} />
-            </Switch>
+            <Scroller>
+              <Switch>
+                <Route exact path="/" component={Landing} />
+                <Route component={Routes} />
+              </Switch>
+            </Scroller>
             <Footer />
           </Fragment>
         </Router>
