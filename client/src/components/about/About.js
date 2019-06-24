@@ -22,7 +22,8 @@ export default class About extends Component {
         <div className="firstDiv row section">
           <h1 className="col-lg-12 title">ABOUT US</h1>
         </div>
-        <div className="secDiv container section">
+        <div className="secDiv section">
+        
           <div className="row">
             <h3>Our little story</h3>
           </div>
