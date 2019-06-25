@@ -10,9 +10,9 @@ export default class ProductList extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <React.Fragment>
-          <div className="py-5">
+          <div>
             <div className="container-fluid">
               <Title name="our" title="products" />
               <div className="row">

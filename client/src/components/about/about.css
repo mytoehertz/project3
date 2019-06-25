@@ -13,23 +13,17 @@
   background-position-y: -15px;
   margin-right: 0 !important;
   margin-left: 0 !important;
-  text-align: left;
-}
-
-.title {
-  margin-top: 20px;
-  font-size: 13vw;
+  text-align: center;
 }
 
 p {
   text-align: justify;
   margin-left: 3vw;
-  margin-right: 3vw
+  margin-right: 3vw;
 }
 
 h3 {
   margin-left: 4vw;
-
 }
 .section {
   margin-bottom: 20px;
