@@ -1,9 +1,9 @@
-import React, { Component, useEffect } from "./node_modules/react";
-import { connect } from "./node_modules/react-redux";
-import PropTypes from "./node_modules/prop-types";
+import React, { Component, useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import Title from "../product/Title";
 import { ProductConsumer } from "../../utils/context";
-import { PurchaseDetails } from "./PuchaseDetails";
+// import { PurchaseDetails } from "./PurchaseDetails";
 // import CartList from "./CartList";
 // import CartTotals from "../cart/CartTotals";
 // import PurchaseList from "./PurchaseList";
@@ -13,8 +13,8 @@ import { getCurrentProfile } from "../../actions/profile";
     const Purchases = ({
       getCurrentProfile,
       auth: { user },
-      profile: { profile, loading },
-      total: {  cartTotal }
+      // profile: { profile, loading },
+      // total: {  cartTotal }
     }) => {
       useEffect(() => {
         getCurrentProfile();
@@ -30,9 +30,9 @@ import { getCurrentProfile } from "../../actions/profile";
                 <React.Fragment>
                 <Title name="your" title="purchase history" />
                 <h4 className="text-center">Hi {user && user.name}</h4>
-                <PurchaseDetails 
+                {/* <PurchaseDetails 
                 total={this.props.total}
-                />
+                /> */}
                   {/* <PurchaseList />
                   <CartColumns />
                   <CartList value={value} /> */}
