@@ -67,7 +67,7 @@ export default class About extends Component {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="row">
           <h3>The Founders</h3>
         </div>
 
