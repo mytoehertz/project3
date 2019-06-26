@@ -22,16 +22,15 @@ export default class Details extends Component {
                     pottingReq
                     } = value.detailProduct;
                 return (
-                    <div className="container py-5">
+                    <div >
                         {/* title */}
                         <div className="row">
                             <div className="col-10 mx-auto text-center text-slanted text-green my-5 text-capitalize">
                                 <h1>{name}</h1>
                             </div>
                         </div>
-                        {/* end of title */}
-                        {/* product info */}
-                        <div className="row">
+                        <div className="container">
+<div className="row">
                             <div className="col-10 mx-auto col-md-6 my-3">
                                 <img src={img} className="img-fluid" alt="product" />
                             </div>
@@ -81,6 +80,10 @@ export default class Details extends Component {
                                 </div>
                             </div>
                         </div>
+                        </div>
+                        {/* end of title */}
+                        {/* product info */}
+                        
                     </div>
                 )
                 }}
