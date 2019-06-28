@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ProductConsumer } from "../../utils/context";
 import { Link } from "react-router-dom";
 import { ButtonContainer } from "./Button";
+import styled from "styled-components";
 
 export default class Details extends Component {
     render() {
@@ -11,50 +12,61 @@ export default class Details extends Component {
                 const {
                     id, 
                     img, 
-                    info, 
+                    size, 
                     price, 
                     name, 
-                    inCart 
+                    inCart,
+                    lightReq,
+                    waterReq,
+                    pet,
+                    pottingReq
                     } = value.detailProduct;
                 return (
-                    <div className="container py-5">
+                    <div >
                         {/* title */}
                         <div className="row">
-                            <div className="col-10 mx-auto text-center text-slanted text-green my-5">
+                            <div className="col-10 mx-auto text-center text-slanted text-green my-5 text-capitalize">
                                 <h1>{name}</h1>
                             </div>
                         </div>
-                        {/* end of title */}
-                        {/* product info */}
-                        <div className="row">
+                        <div className="container">
+<div className="row">
                             <div className="col-10 mx-auto col-md-6 my-3">
                                 <img src={img} className="img-fluid" alt="product" />
                             </div>
                             {/* product text */}
                             <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                                <h3>{name}</h3>
+                                <h2>{name}</h2>
                                 {/* <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                     Made by: <span className="text-uppercase">
                                         {company}
                                     </span>
                                 </h4> */}
+                                <DetailStyle>
+                                <p className="text-muted lead">
+                                    <h5><i className="fas fa-sun" /> {lightReq}
+                                        </h5>
+                                    <h5>
+                                    <i className="fas fa-tint" /> <strong>Water Requirements:</strong> {waterReq}</h5>
+                                    <h5>
+                                    <i className="fas fa-paw" /> <strong>Pet friendly?</strong> {pet}</h5>
+                                    <h5>
+                                    <i className="fa fa-bitbucket" /> <strong>Potting Suggestion</strong> {pottingReq}</h5>
+                                    <h5>
+                                    <i className="fas fa-arrows-alt-v" />  <strong>Size:</strong> {size}</h5>
+                                </p>
+                                </DetailStyle>
                                 <h4 className="text-green">
                                     <strong>
                                         price: <span>$</span>
                                         {price}
                                     </strong>
                                 </h4>
-                                <p className="text-capitalize font-weight:bold mt-3 mb-0">
-                                   Info about the product: 
-                                </p>
-                                <p className="text-muted lead">
-                                    {info}
-                                </p>
                                 {/* buttons */}
                                 <div>
                                     <Link to ="/products">
                                         <ButtonContainer>
-                                            back to products
+                                            back to shop
                                         </ButtonContainer>
                                     </Link>
                                     <ButtonContainer
@@ -68,6 +80,10 @@ export default class Details extends Component {
                                 </div>
                             </div>
                         </div>
+                        </div>
+                        {/* end of title */}
+                        {/* product info */}
+                        
                     </div>
                 )
                 }}
@@ -75,3 +91,7 @@ export default class Details extends Component {
         )
     }
 }
+
+const DetailStyle = styled.div`
+    font-family: "Mali", cursive;
+`

@@ -21,6 +21,7 @@ import Modal from "../product/Modal";
 import Cart from "../cart";
 import Contact from "../contact/Contact";
 import Landing from "../layout/Landing";
+import Purchase from "../purchase/Purchases";
 
 const Routes = () => {
   return (
@@ -42,6 +43,7 @@ const Routes = () => {
         <Route exact path="/products" component={ProductList} />
         <Route exact path="/details" component={Details} />
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/purchases" component={Purchase} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/home" component={Landing} />
         <Route component={NotFound} />
