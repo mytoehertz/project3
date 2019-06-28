@@ -23,13 +23,12 @@
 
 p {
   text-align: justify;
-  margin-left: 3vw;
-  margin-right: 3vw
+  /* margin-left: 3vw; */
+  margin-right: 3vw;
 }
 
 h3 {
   margin-left: 4vw;
-
 }
 .section {
   margin-bottom: 20px;
