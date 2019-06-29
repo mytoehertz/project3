@@ -16,7 +16,7 @@ export const storeProducts = [
     },
     {
         id: 2,
-        name: "assorted succulent",
+        name: "Assorted Succulent",
         img: "./img/succulent.jpg",
         price: 95,
         size: "XS",
@@ -31,7 +31,7 @@ export const storeProducts = [
     },
     {
         id: 3,
-        name: "assorted cactus",
+        name: "Assorted Cactus",
         img: "./img/cactus.jpg",
         price: 35,
         size: "S",
@@ -46,7 +46,7 @@ export const storeProducts = [
     },
     {
         id: 4,
-        name: "chinese money plant",
+        name: "Chinese Money Plant",
         img: "./img/chinese_money.jpg",
         price: 95,
         size: "S",
@@ -61,7 +61,7 @@ export const storeProducts = [
     },
     {
         id: 5,
-        name: "bella palm",
+        name: "Bella Palm",
         img: "./img/parlor_palm.jpg",
         price: 105,
         size: "S",
@@ -76,7 +76,7 @@ export const storeProducts = [
     },
     {
         id: 6,
-        name:"spider plant",
+        name:"Spider Plant",
         img: "./img/spider_plant.jpg",
         price: 60,
         size: "S",
@@ -91,7 +91,7 @@ export const storeProducts = [
     },
     {
         id: 7,
-        name:"pears and jade",
+        name:"Pears and Jade",
         img: "./img/pearls_and_jade.jpg",
         price: 55,
         size: "S",
@@ -106,7 +106,7 @@ export const storeProducts = [
 },
 {
         id: 8,
-        name:"stromanthe",
+        name:"Stromanthe",
         img: "./img/stromanthe.jpg",
         price: 60,
         size: "MD",
@@ -118,32 +118,72 @@ export const storeProducts = [
         waterReq: "1 x one week",
         pet: "yes",
         pottingReq: "6'' pot"
+},
+{
+    id: 9,
+    name:"Marble Queen",
+    img: "./img/marble_queen.jpg",
+    price: 70,
+    size: "SM",
+    inCart: false,
+    count: 3,
+    total: 0,
+    userID: "",
+    lightReq: "medium to bright light would be ideal",
+    waterReq: "1 x one week",
+    pet: "no",
+    pottingReq: "6'' pot"
+},
+{
+    id: 10,
+    name:"Air Plant",
+    img: "./img/air_plant.jpg",
+    price: 30,
+    size: "XS",
+    inCart: false,
+    count: 3,
+    total: 0,
+    userID: "",
+    lightReq: "bright light is recommended",
+    waterReq: "1 x one week",
+    pet: "no",
+    pottingReq: "unpotted"
+},
+{
+    id: 11,
+    name:"Calathea",
+    img: "./img/calathea.jpg",
+    price: 55,
+    size: "SM",
+    inCart: false,
+    count: 3,
+    total: 0,
+    userID: "",
+    lightReq: "medium to bright light would be ideal",
+    waterReq: "1 x one week",
+    pet: "yes",
+    pottingReq: "4'' pot"
+},
+{
+    id: 12,
+    name:"Alocasia",
+    img: "./img/alocasia.jpg",
+    price: 55,
+    size: "MD",
+    inCart: false,
+    count: 3,
+    total: 0,
+    userID: "",
+    lightReq: "bright light is recommended",
+    waterReq: "1 x one week",
+    pet: "no",
+    pottingReq: "6'' pot"
 }
-    // {
-    //     id: 7,
-    //     name: "CORDYLINE",
-    //     img: "./img/plant.jpg",
-    //     price: 70,
-    //     info: "Small and pretty",
-    //     inCart: false,
-    //     count: 0,
-    //     total: 0
-    // },
-    // {
-    //     id: 8,
-    //     name: "DARCENA MARG STAG",
-    //     img: "./img/plant.jpg",
-    //     price: 90,
-    //     info: "Great house plant!",
-    //     inCart: false,
-    //     count: 0,
-    //     total: 0
-    // }
-];
+]
 
 export const detailProduct = {
-    _id:"5d0f72aa0f66b75f1b55960e",
-    name:"zebra plant",
+    id:"5d0f72aa0f66b75f1b55960e",
+    name:"Zebra Plant",
     img: "./img/zebra_plant.jpg",
     price: 80,
     size: "xs",
