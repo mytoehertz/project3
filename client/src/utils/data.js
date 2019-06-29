@@ -2,7 +2,7 @@ export const storeProducts = [
     {
         id: 1,
         name:"Zebra Plant",
-        img: "./img/zebra_plant.jpg",
+        img: "public/img/zebra_plant.jpg",
         price: 80,
         size: "XS",
         inCart: false,
@@ -17,7 +17,7 @@ export const storeProducts = [
     {
         id: 2,
         name: "Assorted Succulent",
-        img: "./img/succulent.jpg",
+        img: "public/img/succulent.jpg",
         price: 95,
         size: "XS",
         inCart: false,
@@ -32,7 +32,7 @@ export const storeProducts = [
     {
         id: 3,
         name: "Assorted Cactus",
-        img: "./img/cactus.jpg",
+        img: "public/img/cactus.jpg",
         price: 35,
         size: "S",
         inCart: false,
@@ -47,7 +47,7 @@ export const storeProducts = [
     {
         id: 4,
         name: "Chinese Money Plant",
-        img: "./img/chinese_money.jpg",
+        img: "public/img/chinese_money.jpg",
         price: 95,
         size: "S",
         inCart: false,
@@ -62,7 +62,7 @@ export const storeProducts = [
     {
         id: 5,
         name: "Bella Palm",
-        img: "./img/parlor_palm.jpg",
+        img: "public/img/parlor_palm.jpg",
         price: 105,
         size: "S",
         inCart: false,
@@ -77,7 +77,7 @@ export const storeProducts = [
     {
         id: 6,
         name:"Spider Plant",
-        img: "./img/spider_plant.jpg",
+        img: "public/img/spider_plant.jpg",
         price: 60,
         size: "S",
         inCart: false,
@@ -92,7 +92,7 @@ export const storeProducts = [
     {
         id: 7,
         name:"Pears and Jade",
-        img: "./img/pearls_and_jade.jpg",
+        img: "public/img/pearls_and_jade.jpg",
         price: 55,
         size: "S",
         inCart: false,
@@ -107,7 +107,7 @@ export const storeProducts = [
 {
         id: 8,
         name:"Stromanthe",
-        img: "./img/stromanthe.jpg",
+        img: "public/img/stromanthe.jpg",
         price: 60,
         size: "MD",
         inCart: false,
@@ -122,7 +122,7 @@ export const storeProducts = [
 {
     id: 9,
     name:"Marble Queen",
-    img: "./img/marble_queen.jpg",
+    img: "public/img/marble_queen.jpg",
     price: 70,
     size: "SM",
     inCart: false,
@@ -137,7 +137,7 @@ export const storeProducts = [
 {
     id: 10,
     name:"Air Plant",
-    img: "./img/air_plant.jpg",
+    img: "public/img/air_plant.jpg",
     price: 30,
     size: "XS",
     inCart: false,
@@ -152,7 +152,7 @@ export const storeProducts = [
 {
     id: 11,
     name:"Calathea",
-    img: "./img/calathea.jpg",
+    img: "public/img/calathea.jpg",
     price: 55,
     size: "SM",
     inCart: false,
@@ -167,7 +167,7 @@ export const storeProducts = [
 {
     id: 12,
     name:"Alocasia",
-    img: "./img/alocasia.jpg",
+    img: "public/img/alocasia.jpg",
     price: 55,
     size: "MD",
     inCart: false,
@@ -184,7 +184,7 @@ export const storeProducts = [
 export const detailProduct = {
     id:"5d0f72aa0f66b75f1b55960e",
     name:"Zebra Plant",
-    img: "./img/zebra_plant.jpg",
+    img: "public/img/zebra_plant.jpg",
     price: 80,
     size: "xs",
     inCart: false,
