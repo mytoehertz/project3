@@ -77,7 +77,7 @@ export default class About extends Component {
               <div className="col-md-4" />
               <div className="col-md-8 text">
                 <h3>Alissa</h3>
-                <p>The glory of gardening: hand in the dirt, head in the sun, heart with nature.
+                <p className="small-caps">The glory of gardening: hand in the dirt, head in the sun, heart with nature.
                 To nurture a garden is to fee not just on the body, but the soul.</p>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default class About extends Component {
             <div className="row">
               <div className="col-md-8 text2">
                 <h3>Adam</h3>
-                <p>A garden requires patient labor and attention.
+                <p className="small-caps">A garden requires patient labor and attention.
                 Plants do not grow merely to satisfy ambitions or to fulfill good intentions.
                 They thrive because someone expended effort on them.</p>
               </div>

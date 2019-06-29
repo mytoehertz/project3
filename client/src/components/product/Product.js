@@ -83,6 +83,7 @@ const ProductWrapper = styled.div`
       background: rgba(195, 195, 195);
     }
   }
+  
   .img-container {
     position: relative !important;
     overflow: hidden !important;
