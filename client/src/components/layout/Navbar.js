@@ -20,7 +20,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             </Link>
           </li>
           <li>
-            <Link to="/posts">Posts</Link>
+            <Link to="/posts">Blog</Link>
           </li>
         </ul>
       </div>
@@ -28,7 +28,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <a className="mx-auto" href="#">
           {" "}
         </a>
-        <Link to="/home" className="nav-link">
+        <Link to="/about" className="nav-link">
           <img src={logo} alt="logo" style={{ width: 150 }} />
         </Link>
 
@@ -47,9 +47,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Link to="/products">Shop</Link>
           </li>
           <li>
+          <Link to="/home">
             <a onClick={logout} href="#!">
-              <i className="fas fa-sign-in-alt" /> Logout
+              {/* <i className="fas fa-sign-in-alt" />  */}
+              Logout
             </a>
+            </Link>
           </li>
           <li>
             <CartButton />
