@@ -2,7 +2,7 @@ export const storeProducts = [
     {
         id: 1,
         name:"Zebra Plant",
-        img: "img/zebra_plant.jpg",
+        img: "img/zebra_plant.JPG",
         price: 80,
         size: "XS",
         inCart: false,
